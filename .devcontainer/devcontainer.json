@@ -1,0 +1,13 @@
+{
+  "name": "CentOS Stream 9 (quay)",
+  "image": "quay.io/centos/centos:stream9",
+  "remoteUser": "root",
+  "postCreateCommand": "dnf -y update && dnf -y install git which sudo findutils procps-ng && dnf clean all",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
